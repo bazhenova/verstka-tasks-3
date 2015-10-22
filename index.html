@@ -6,13 +6,249 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <h1>Табло рейсов аэропорта RANDOM</h1>
         <!-- Поле для фильтрации по городу -->
         <input
             type="text"
             placeholder="Город отправления"
             value=""
             onkeyup="this.setAttribute('value', this.value)">
-
+        <button>Поиск</button>
         <!-- Здесь применять вашу самую сильную магию -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Тип рейса</th>
+                    <th>Номер<br>рейса</th>
+                    <th>Авиакомпания</th>
+                    <th>Логотип</th>
+                    <th>Тип<br>воздушного<br>судна</th>
+                    <th>Аэропорт<br>назначения</th>
+                    <th>Плановое время<br>вылета/прилёта</th>
+                    <th>Терминал</th>
+                    <th>Статус<br>рейса</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Тип рейса</th>
+                    <th>Номер<br>рейса</th>
+                    <th>Авиакомпания</th>
+                    <th>Логотип</th>
+                    <th>Тип<br>воздушного<br>судна</th>
+                    <th>Аэропорт<br>назначения</th>
+                    <th>Плановое время<br>вылета/прилёта</th>
+                    <th>Терминал</th>
+                    <th>Статус<br>рейса</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Вылет</td>
+                    <td>2414</td>
+                    <td>АЭРОФЛОТ</td>
+                    <td>
+                        <img src="images\aeroflot.gif" alt="AEROFLOT">
+                    </td>
+                    <td>A-320</td>
+                    <td>Париж</td>
+                    <td><time>05:00</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>3478</td>
+                    <td>AIR FRANCE</td>
+                    <td>
+                        <img src="images\airfrance.gif" alt="AIRFRANCE">
+                    </td>
+                    <td>A-319</td>
+                    <td>Челябинск</td>
+                    <td><time>07:10</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>2356</td>
+                    <td>AIR FRANCE</td>
+                    <td>
+                        <img src="images\airfrance.gif" alt="AIRFRANCE">
+                    </td>
+                    <td>A-320</td>
+                    <td>Краснодар</td>
+                    <td><time>09:25</time></td>
+                    <td>C</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>1267</td>
+                    <td>NORD WIND</td>
+                    <td>
+                        <img src="images\nordwind.gif" alt="NORD WIND">
+                    </td>
+                    <td>A-319</td>
+                    <td>Париж</td>
+                    <td><time>11:10</time></td>
+                    <td>E</td>
+                    <td>Отменен</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>4096</td>
+                    <td>RED WINGS</td>
+                    <td>
+                        <img src="images\redwings.gif" alt="RED WINGS">
+                    </td>
+                    <td>CRJ-200</td>
+                    <td>Новосибирск</td>
+                    <td><time>12:27</time></td>
+                    <td>C</td>
+                    <td>Регистрация</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>1024</td>
+                    <td>АЭРОФЛОТ</td>
+                    <td>
+                        <img src="images\aeroflot.gif" alt="AEROFLOT">
+                    </td>
+                    <td>CRJ-200</td>
+                    <td>Екатеринбург</td>
+                    <td><time>14:00</time></td>
+                    <td>F</td>
+                    <td>Приземлился</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>4567</td>
+                    <td>NORD WIND</td>
+                    <td>
+                        <img src="images\nordwind.gif" alt="NORD WIND">
+                    </td>
+                    <td>A-320</td>
+                    <td>Париж</td>
+                    <td><time>14:15</time></td>
+                    <td>F</td>
+                    <td>Ожидание посадки</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>2376</td>
+                    <td>RED WINGS</td>
+                    <td>
+                        <img src="images\redwings.gif" alt="RED WINGS">
+                    </td>
+                    <td>A-320</td>
+                    <td>Баку</td>
+                    <td><time>16:00</time></td>
+                    <td>C</td>
+                    <td>Посадка закончена</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>2875</td>
+                    <td>URAL<br>AIRLINES</td>
+                    <td>
+                        <img src="images\ural.gif" alt="URAL AIRLINES">
+                    </td>
+                    <td>B-767-300</td>
+                    <td>Екатеринбург</td>
+                    <td><time>17:45</time></td>
+                    <td>C</td>
+                    <td>Летит</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>3578</td>
+                    <td>АЭРОФЛОТ</td>
+                    <td>
+                        <img src="images\aeroflot.gif" alt="AEROFLOT">
+                    </td>
+                    <td>CRJ-200</td>
+                    <td>Париж</td>
+                    <td><time>18:13</time></td>
+                    <td>E</td>
+                    <td>Регистрация</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>3456</td>
+                    <td>URAL<br>AIRLINES</td>
+                    <td>
+                        <img src="images\ural.gif" alt="URAL AIRLINES">
+                    </td>
+                    <td>B-767-300</td>
+                    <td>Новосибирск</td>
+                    <td><time>19:35</time></td>
+                    <td>F</td>
+                    <td>Регистрация</td>
+                </tr>
+                <tr>
+                    <td>Вылет</td>
+                    <td>4432</td>
+                    <td>NORD WIND</td>
+                    <td>
+                        <img src="images\nordwind.gif" alt="NORD WIND">
+                    </td>
+                    <td>A-320</td>
+                    <td>Караганда</td>
+                    <td><time>19:56</time></td>
+                    <td>D</td>
+                    <td>Посадка</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>4698</td>
+                    <td>RED WINGS</td>
+                    <td>
+                        <img src="images\redwings.gif" alt="RED WINGS">
+                    </td>
+                    <td>A-320</td>
+                    <td>Екатеринбург</td>
+                    <td><time>21:00</time></td>
+                    <td>D</td>
+                    <td>Ожидается</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>2145</td>
+                    <td>TURKISH<br>AIRLINES</td>
+                    <td>
+                        <img src="images\turkish.gif" alt="Turkish Airlines">
+                    </td>
+                    <td>CRJ-200</td>
+                    <td>Екатеринбург</td>
+                    <td><time>22:43</time></td>
+                    <td>E</td>
+                    <td>Задерживается до 23:20</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>2387</td>
+                    <td>TURKISH<br>AIRLINES</td>
+                    <td>
+                        <img src="images\turkish.gif" alt="Turkish Airlines">
+                    </td>
+                    <td>B-767-300</td>
+                    <td>Екатеринбург</td>
+                    <td><time>23:00</time></td>
+                    <td>F</td>
+                    <td>Летит</td>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+            <h2>Запросить данные о рейсе</h2>
+            <label for="phone">Номер телефона</label><br>
+            <input id="phone" name="phone" type="text" pattern="\+7[0-9]{10}" 
+                placeholder="+7**********" required><br>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="text" pattern="[^@]+@[^@]+\.[^@]+" 
+                placeholder="abc@abc.abc" required><br>
+            <input class="button" type="submit" value="Отправить данные на телефон">
+        </form>
     </body>
 </html>

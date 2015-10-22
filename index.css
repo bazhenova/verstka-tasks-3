@@ -1,0 +1,115 @@
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+th,
+td
+{
+    padding: 4px;
+    text-align: center;
+    position: relative;
+    width: 130px;
+
+}
+
+tr:nth-child(2n) td::after
+{
+    content: "";
+    background-color: #93d4e7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+tr:nth-child(2n+1) td::after
+{
+    content: "";
+    background-color: #c0fff4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+tr:hover
+{
+    background: #0cf4c7;
+}
+
+td:hover::after,
+th:hover::after,
+th:hover::before,
+td:hover::before
+{
+    content: "";
+    position: absolute;
+    background-color: #0cf4c7;
+    left: 0;
+    top: -10000px;
+    height: 20000px;
+    width: 100%;
+    z-index: -1;
+}
+
+thead tr:first-child,
+tfoot tr:first-child
+{
+    border: 2px solid #000;
+    background: #93d4e7;
+}
+
+input
+{
+    margin: 7px 0;
+    padding: 5px;
+}
+
+input[type="text"]:valid
+{
+    background: #c0fff4; 
+}
+
+input[type="text"]:invalid
+{
+    background: #fae1dd;
+}
+
+input[type="text"]:valid ~ input[type="submit"]
+{
+    display: inline-block;
+}
+
+input[type="text"]:invalid ~ input[type="submit"]
+{
+    display: none;
+}
+
+label
+{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+form 
+{
+    padding: 10px 20px;
+    background-color: #efc67b;
+    width: 300px;
+    margin: 5px 0;
+}
+
+button,
+.button
+{
+    background: #fff900;
+    padding: 5px;
+}
