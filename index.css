@@ -13,7 +13,6 @@ td
     text-align: center;
     position: relative;
     width: 130px;
-
 }
 
 tr:nth-child(2n) td::after
@@ -45,8 +44,6 @@ tr:hover
     background: #0cf4c7;
 }
 
-td:hover::after,
-th:hover::after,
 th:hover::before,
 td:hover::before
 {
@@ -107,9 +104,70 @@ form
     margin: 5px 0;
 }
 
-button,
 .button
 {
     background: #fff900;
     padding: 5px;
+}
+
+/*Фильтрация по городу*/
+.find[value=""] ~ table tr
+{
+    display: table-row;
+}
+
+.find[value="Баку"] ~ table tbody tr:not([class~="baku"])
+{
+    display: none;
+}
+
+.find[value="Екатеринбург"] ~ table tbody tr:not([class~="ekb"])
+{
+    display: none;
+}
+
+.find[value="Париж"] ~ table tbody tr:not([class~="paris"])
+{
+    display: none;
+}
+
+.find[value="Челябинск"] ~ table tbody tr:not([class~="chelyabinsk"])
+{
+    display: none;
+}
+
+.find[value="Краснодар"] ~ table tbody tr:not([class~="krasnodar"])
+{
+    display: none;
+}
+
+.find[value="Ноосибирск"] ~ table tbody tr:not([class~="novosibirsk"])
+{
+    display: none;
+}
+
+.find[value="Караганда"] ~ table tbody tr:not([class~="karaganda"])
+{
+    display: none;
+}
+
+/*Фильтрация по ылету/прилету*/
+.category
+{
+    padding: 5px;
+}
+
+.category[data=""] ~ table tr
+{
+    display: table-row;
+}
+
+.category[data="arrival"] ~ table tbody tr:not([class~="down"])
+{
+    display: none;
+}
+
+.category[data="take-off"] ~ table tbody tr:not([class~="up"])
+{
+    display: none;
 }

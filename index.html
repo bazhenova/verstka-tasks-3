@@ -8,12 +8,24 @@
     <body>
         <h1>Табло рейсов аэропорта RANDOM</h1>
         <!-- Поле для фильтрации по городу -->
+        <label for="field">Выберите критерий поиска:</label>
         <input
+            id="field"
+            class="find"
             type="text"
-            placeholder="Город отправления"
+            placeholder="Город"
             value=""
             onkeyup="this.setAttribute('value', this.value)">
-        <button>Поиск</button>
+        <select
+            id="filter"
+            class="category"
+            data=""
+            onchange="this.setAttribute('data',
+            this.options[this.options.selectedIndex].value)">
+            <option selected>Не выбрано</option>
+            <option value="take-off">Вылет</option>
+            <option value="arrival">Прилет</option>
+        </select>
         <!-- Здесь применять вашу самую сильную магию -->
         <table>
             <thead>
@@ -43,7 +55,7 @@
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
+                <tr class="paris up">
                     <td>Вылет</td>
                     <td>2414</td>
                     <td>АЭРОФЛОТ</td>
@@ -56,7 +68,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="chelyabinsk up">
                     <td>Вылет</td>
                     <td>3478</td>
                     <td>AIR FRANCE</td>
@@ -69,7 +81,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="krasnodar up">
                     <td>Вылет</td>
                     <td>2356</td>
                     <td>AIR FRANCE</td>
@@ -82,7 +94,7 @@
                     <td>C</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="paris up">
                     <td>Вылет</td>
                     <td>1267</td>
                     <td>NORD WIND</td>
@@ -95,7 +107,7 @@
                     <td>E</td>
                     <td>Отменен</td>
                 </tr>
-                <tr>
+                <tr class="novosibirsk up">
                     <td>Вылет</td>
                     <td>4096</td>
                     <td>RED WINGS</td>
@@ -108,7 +120,7 @@
                     <td>C</td>
                     <td>Регистрация</td>
                 </tr>
-                <tr>
+                <tr class="ekb down">
                     <td>Прилет</td>
                     <td>1024</td>
                     <td>АЭРОФЛОТ</td>
@@ -121,7 +133,7 @@
                     <td>F</td>
                     <td>Приземлился</td>
                 </tr>
-                <tr>
+                <tr class="paris up">
                     <td>Вылет</td>
                     <td>4567</td>
                     <td>NORD WIND</td>
@@ -134,7 +146,7 @@
                     <td>F</td>
                     <td>Ожидание посадки</td>
                 </tr>
-                <tr>
+                <tr class="baku up">
                     <td>Вылет</td>
                     <td>2376</td>
                     <td>RED WINGS</td>
@@ -147,7 +159,7 @@
                     <td>C</td>
                     <td>Посадка закончена</td>
                 </tr>
-                <tr>
+                <tr class="ekb down">
                     <td>Прилет</td>
                     <td>2875</td>
                     <td>URAL<br>AIRLINES</td>
@@ -160,7 +172,7 @@
                     <td>C</td>
                     <td>Летит</td>
                 </tr>
-                <tr>
+                <tr class="paris up">
                     <td>Вылет</td>
                     <td>3578</td>
                     <td>АЭРОФЛОТ</td>
@@ -173,7 +185,7 @@
                     <td>E</td>
                     <td>Регистрация</td>
                 </tr>
-                <tr>
+                <tr class="novosibirsk up">
                     <td>Вылет</td>
                     <td>3456</td>
                     <td>URAL<br>AIRLINES</td>
@@ -186,7 +198,7 @@
                     <td>F</td>
                     <td>Регистрация</td>
                 </tr>
-                <tr>
+                <tr class="karaganda up">
                     <td>Вылет</td>
                     <td>4432</td>
                     <td>NORD WIND</td>
@@ -199,7 +211,7 @@
                     <td>D</td>
                     <td>Посадка</td>
                 </tr>
-                <tr>
+                <tr class="ekb down">
                     <td>Прилет</td>
                     <td>4698</td>
                     <td>RED WINGS</td>
@@ -212,8 +224,8 @@
                     <td>D</td>
                     <td>Ожидается</td>
                 </tr>
-                <tr>
-                    <td>Прилет</td>
+                <tr class="ekb up">
+                    <td>Вылет</td>
                     <td>2145</td>
                     <td>TURKISH<br>AIRLINES</td>
                     <td>
@@ -225,7 +237,7 @@
                     <td>E</td>
                     <td>Задерживается до 23:20</td>
                 </tr>
-                <tr>
+                <tr class="ekb down">
                     <td>Прилет</td>
                     <td>2387</td>
                     <td>TURKISH<br>AIRLINES</td>
