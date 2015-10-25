@@ -16,16 +16,9 @@
             placeholder="Город"
             value=""
             onkeyup="this.setAttribute('value', this.value)">
-        <select
-            id="filter"
-            class="category"
-            data=""
-            onchange="this.setAttribute('data',
-            this.options[this.options.selectedIndex].value)">
-            <option selected>Не выбрано</option>
-            <option value="take-off">Вылет</option>
-            <option value="arrival">Прилет</option>
-        </select>
+        <input type="radio" name="choice" id="all" checked>Все
+        <input type="radio" name="choice" id="up">Вылет
+        <input type="radio" name="choice" id="down">Прилет
         <!-- Здесь применять вашу самую сильную магию -->
         <table>
             <thead>
