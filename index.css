@@ -110,6 +110,14 @@ form
     padding: 5px;
 }
 
+/*Фильтрация по вылету/прилету*/
+
+#down:checked ~ table tbody tr:not([class~="down"]),
+#up:checked ~ table tbody tr:not([class~="up"])
+{
+    display: none;
+}
+
 /*Фильтрация по городу*/
 .find[value=""] ~ table tr
 {
@@ -120,22 +128,9 @@ form
 .find[value="Екатеринбург"] ~ table tbody tr:not([class~="ekb"]),
 .find[value="Париж"] ~ table tbody tr:not([class~="paris"]),
 .find[value="Челябинск"] ~ table tbody tr:not([class~="chelyabinsk"]),
-.find[value="Ноосибирск"] ~ table tbody tr:not([class~="novosibirsk"]),
+.find[value="Новосибирск"] ~ table tbody tr:not([class~="novosibirsk"]),
 .find[value="Краснодар"] ~ table tbody tr:not([class~="krasnodar"]),
 .find[value="Караганда"] ~ table tbody tr:not([class~="karaganda"])
-{
-    display: none;
-}
-
-/*Фильтрация по вылету/прилету*/
-
-#all:checked ~ table tr
-{
-    display: table-row;
-}
-
-#down:checked ~ table tbody tr:not([class~="down"]),
-#up:checked ~ table tbody tr:not([class~="up"])
 {
     display: none;
 }
